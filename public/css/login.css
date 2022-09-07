@@ -1,0 +1,20 @@
+input {
+    width: 250px;
+    height: 40px;
+    display: block;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 0px 10px;
+}
+
+main{
+  justify-content: center;
+    background-color: rgb(38,42,50);
+    margin: 100px auto;
+    border-radius: 10px;
+    padding: 40px 80px;
+    display:inline-block;
+    text-align: center;
+}

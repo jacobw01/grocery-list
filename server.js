@@ -22,6 +22,11 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(logger('dev'))
+
+//image
+//app.use(express.static(path.join(__dirname,'public')))
+app.use( express.static( "public" ) );
+
 // Sessions
 app.use(
     session({
@@ -40,6 +45,8 @@ app.use(flash())
   
 app.use('/', mainRoutes)
 app.use('/todos', todoRoutes)
+
+
  
 app.listen(process.env.PORT, ()=>{
     console.log('Server is running, you better catch it!')

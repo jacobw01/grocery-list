@@ -4,29 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grocery List</title>
     <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/b42ceb7ef9.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="/icon/favicon-32x32.png">
 </head>
-<body>
-    <h1>Todos</h1>
-    <ul>
+<body class ='listPage'>
+    <header>
+      <h1>Groceries</h1>
+      <span id="nav">Welcome, <%= user.userName %> | <a href="/logout">Logout</a></span>
+    </header>
+ 
+    <main >
+      <h2 class="normal">You have <span class="accent"><%= left %></span> things left to get.</h2>
+      <ul>
     <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'> Delete </span>
-            </li>
+               <span id="quantity" class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.quantity %></span>
+              <button class="mod" id="add">+</button>
+              <button class="mod" id="sub">-</button>
+              <span class='del' style="color: Tomato">
+             <i class="fa-solid fa-trash-can"></i>
+            </li>   
     <% }) %>    
-    </ul>
+    </ul>   
 
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+  
 
     <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+        <input type="text" placeholder="Enter Grocery Item" name='todoItem'>
         <input type="submit">
     </form>
 
-    <a href="/logout">Logout</a>
+    </main>
+  
 
+    <section>
+    <img class= 'veggies' src="images/veggies.jpg" alt="veggies"
+    </section>
+      
+
+   
     <script src="js/main.js"></script>
 </body>
 </html>

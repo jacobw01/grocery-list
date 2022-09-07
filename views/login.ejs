@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Log In</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="/icon/favicon-32x32.png">
 </head>
 <body>
-    <% if (locals.messages.errors) { %>
+  <header>
+        <h1>Grocery List</h1>
+  </header>
+  <main>
+    <h1>Sign In</h1>
+     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
@@ -21,6 +29,8 @@
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
         <input type="submit">
+        <p>Need an account?<a href="/signup"> Signup</a></p> 
     </form>
+  </main>
 </body>
 </html>

@@ -1,10 +1,126 @@
-h1{
-    color: red;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
 }
 .completed{
     text-decoration: line-through;
     color: gray;
 }
 .not{
-    text-decoration: underline;
 }
+
+body {
+    background-color: rgb(30, 33, 38);
+    background-image:url(../images/veggies.jpg);
+    color: white;
+    margin: 0;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+ .listPage {
+    /*background-color: rgb(30, 33, 38);*/
+    background-image:url(../images/veggies.jpg);
+    color: white;
+    margin: 0;
+    text-align: center
+    background-repeat: no-repeat;
+}
+
+header {
+   /* background-image: linear-gradient(rgb(22,24,29), rgb(30, 33, 38)); */
+    padding-top: 20px;
+    height: 100px;
+    text-align: center;
+}
+h1, h2 {
+    color: lightgreen;
+}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+a {
+    color: lightgreen;
+}
+
+main {
+    justify-content: center;
+    background-color: rgb(38,42,50);
+    margin: 100px auto;
+    border-radius: 10px;
+    padding: 40px 80px;
+    display:inline-block;
+    text-align: center;
+}
+
+input[type=submit] {
+    background-color: lightgreen;
+    font-weight: bold;
+}
+li {
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 0.5px solid darkgray;
+    align-items: center;
+    text-decoration: none;
+}
+#quantity {
+    margin-left: auto;
+    width: 40px;
+}
+
+.mod {
+    background-color: lightgreen;
+    height: 20px;
+    width: 20px;
+    border-radius: 2px;
+    margin: 2px;
+    vertical-align: center;
+}
+
+.del {
+  margin-left: 20px;
+}
+
+input {
+    height: 25px;
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+ul {
+    margin-bottom: 30px;
+}
+
+
+.veggies {
+  width: 100%;
+  height:100%;
+  
+}
+
+#nav {
+  position:absolute;
+  top:20px;
+  right:20px;
+}
+
+.normal {
+  color: white
+}
+.accent {
+  color: lightgreen
+}
+

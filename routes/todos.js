@@ -13,4 +13,11 @@ router.put('/markIncomplete', todosController.markIncomplete)
 
 router.delete('/deleteTodo', todosController.deleteTodo)
 
+//route to increase items
+router.put('/addItem', todosController.addItem)
+
+//route to decrease items
+router.put('/subtractItem', todosController.subtractItem)
+
+
 module.exports = router
